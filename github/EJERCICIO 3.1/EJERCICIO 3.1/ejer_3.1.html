@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cristian">
+    <title>JavaScrip</title>
+    <style>
+        p {color: #c0c; font-size: 30px;}
+        img{display: block;margin: auto;}
+        div{text-align: center;}
+    </style>
+</head>
+<body>
+    <div>
+        <p id="parrafo1"> No pulses el boton que dice -No pulsar-</p>
+        <img src="images/messi.jpg" id="foto" width="600px"> <br>
+        <button onclick="dejoven();">Messi joven</button>
+        <button onclick="Hoy();">Hoy</button>
+        <button onclick="noPulsar();">No pulsar</button>
+        <button onclick="mostrar();">mostrar</button>
+        <button onclick="ocultar();">ocultar</button>
+    </div>
+    <script>
+        function dejoven(){
+            document.getElementById("parrafo1").innerHTML="No pulses el boton que dice -No pulsar-";
+            document.getElementById("parrafo1").style.color="#c0c";
+            document.getElementById("foto").src="images/messi 2.jpg";
+        }
+        function Hoy(){
+            document.getElementById("parrafo1").innerHTML="No pulses el boton que dice -No pulsar-";
+            document.getElementById("parrafo1").style.color="#c0c";
+            document.getElementById("foto").src="images/messi 3.jpg";
+        }
+        function noPulsar(){
+            document.getElementById("parrafo1").innerHTML="Has pulsado el boton que te pedi no pulsases";
+            document.getElementById("parrafo1").style.color="red";
+            setTimeout(function(){document.getElementById("foto").src="images/messi 4.jpg";},2000);
+        }
+        function mostrar(){
+            document.getElementById("parrafo1").innerHTML="No pulses el boton que dice -No pulsar-";
+            document.getElementById("parrafo1").style.display ="block";
+            document.getElementById("foto").style.display ="block";  
+        }
+        function ocultar(){
+            document.getElementById("parrafo1").style.display ="none";
+            document.getElementById("foto").style.display ="none"; 
+        }
+    </script>
+</body>
+</html>
